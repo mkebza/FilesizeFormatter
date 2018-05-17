@@ -9,5 +9,13 @@
             "email": "marek@kebza.cz"
         }
     ],
-    "require": {}
+    "autoload": {
+      "psr-4": { "MKebza\\FilesizeFormatter\\": "" },
+      "exclude-from-classmap": [
+        "/Tests/"
+      ]
+    },
+    "require": {
+       "php": "^7.1.3"
+    }
 }
