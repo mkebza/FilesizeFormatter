@@ -1,7 +1,7 @@
 {
-    "name": "mkebza/filesize-formatter",
+    "name": "mkebza/filesize-bundle",
     "description": "Simple file size formatter to human readable format, with twig integration",
-    "type": "library",
+    "type": "symfony-bundle",
     "license": "MIT",
     "authors": [
         {
@@ -10,12 +10,13 @@
         }
     ],
     "autoload": {
-      "psr-4": { "MKebza\\FilesizeFormatter\\": "" },
+      "psr-4": { "MKebza\\Filesize\\": "" },
       "exclude-from-classmap": [
         "/Tests/"
       ]
     },
     "require": {
-       "php": "^7.1.3"
+       "php": "^7.1.3",
+       "symfony/twig-bridge": "~3.4|~4.0"
     }
 }
