@@ -1,0 +1,13 @@
+{
+    "name": "mkebza/filesize-formatter",
+    "description": "Simple file size formatter to human readable format, with twig integration",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Marek Kebza",
+            "email": "marek@kebza.cz"
+        }
+    ],
+    "require": {}
+}
