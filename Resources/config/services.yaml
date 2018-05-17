@@ -1,0 +1,4 @@
+services:
+    MKebza\Filesize\Twig\FilesizeExtension:
+        tags:
+            - { name: twig.extension }

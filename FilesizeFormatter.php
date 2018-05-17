@@ -17,13 +17,13 @@ class FilesizeFormatter
      * @param int $precision
      * @return string
      */
-    public static function si(int $size, int $precision = 2) {
-        if ($bytes < 1000) {
-            return $bytes . ' B';
+    public static function format(int $size, int $precision = 2) {
+        if ($size < 1000) {
+            return $size . ' B';
         }
 
-        $factor = floor(log($bytes, 1000));
-        return sprintf("%.{$precision}f ", $bytes / pow(1000, $factor)) . ['B', 'KB', 'MB', 'GB', 'TB', 'PB'][$factor];
+        $factor = floor(log($size, 1000));
+        return sprintf("%.{$precision}f ", $size / pow(1000, $factor)) . ['B', 'KB', 'MB', 'GB', 'TB', 'PB'][$factor];
     }
 
     /**
@@ -34,12 +34,12 @@ class FilesizeFormatter
      * @return string
      */
     public static function binary(int $size, int $precision = 2) {
-        if ($bytes < 1024) {
-            return $bytes . ' B';
+        if ($size < 1024) {
+            return $size . ' B';
         }
 
-        $factor = floor(log($bytes, 1024));
-        return sprintf("%.{$precision}f ", $bytes / pow(1024, $factor)) . ['B', 'KB', 'MB', 'GB', 'TB', 'PB'][$factor];
+        $factor = floor(log($size, 1024));
+        return sprintf("%.{$precision}f ", $size / pow(1024, $factor)) . ['B', 'KB', 'MB', 'GB', 'TB', 'PB'][$factor];
     }
 
 }
